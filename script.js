@@ -88,8 +88,8 @@ const addNums = (x, y) => {
     return sum = x + y;
 }
 // uncomment the line below, to call the function, and add one more function call
-console.log( addNums(4, 6) );
-console.log(addNums(11, 4))
+console.log(addNums(4, 6));
+console.log(addNums(11, 4));
 
 /// b. Prints a special message if name is "Beyonce"
 const isBeyonce = (name) => {
@@ -100,8 +100,8 @@ const isBeyonce = (name) => {
     }
 }
 
-console.log(isBeyonce("Beyonce"))
-console.log(isBeyonce("Jimena"))
+console.log(isBeyonce("Beyonce"));
+console.log(isBeyonce("Jimena"));
 // Test "Beyonce" and other names to ensure it works
 
 
@@ -116,36 +116,45 @@ const reduceEvens = (x) => {
     }
 }
 //Write your own function calls
-console.log(reduceEvens(15))
-console.log(reduceEvens(34))
+console.log(reduceEvens(15));
+console.log(reduceEvens(34));
 
 // 14. Write a function called shortenString(string) that returns the first 10 characters of a string if it is longer than 10
 //remove all
 const shortenString = (string) => {
     if (string.length > 10){
-        return string.length
-    }
+        return string.substring(0,10);
+    } 
 }
-
-
 
 // Spicy Challenges
 let burger = 5.99;
 let fries = 3.99;
 let soda = 1.99;
 
+
 // 15. Write a function buyBurgers(budget) that takes in a budget amount and returns the number of burgers that can be bought.
 /// If no burgers can be bought, return "Sorry, no burgers for you."
 
 const buyBurgers = (budget) => {
-
+    if (budget/burger >= 1){
+        return "You can buy " + Math.floor(budget/burger) + " burgers.";
+    } else {
+        return "Sorry, no burgers for you.";
+    }
 }
+console.log(buyBurgers(30))
+console.log(buyBurgers(4))
 
 // 16. A meal consists of 1 burger, 1 fry, and 1 soda.
 /// Write a function called buyMeals(budget) that tells the user how many meals they can buy and how much money they will have left over.
 /// Bonus: Round the answer to the nearest penny.
 const buyMeals = (budget) => {
-
+    if (budget/(burger + fries + soda) >= 1){
+        return "You can buy " + Math.floor(budget/(burger + fries + soda)) + " meals. Your change will be ";
+    } else {
+        return "Sorry, no meals for you.";
+    }
 }
 
 
@@ -157,4 +166,3 @@ const buyMeals = (budget) => {
 // 18. [Super Challenge] In math, Factorial is the product of an integer and all the integers below it.
 /// For example: factorial(3) = 3*2*1 = 6 ---  factorial(5) = 5*4*3*2*1 = 120
 /// Write a function factorial(x) that finds the factorial of any integer.
-
