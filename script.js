@@ -131,7 +131,8 @@ const shortenString = (string) => {
 let burger = 5.99;
 let fries = 3.99;
 let soda = 1.99;
-
+let meal = burger + fries + soda
+let amountMeals = 0
 
 // 15. Write a function buyBurgers(budget) that takes in a budget amount and returns the number of burgers that can be bought.
 /// If no burgers can be bought, return "Sorry, no burgers for you."
@@ -150,12 +151,14 @@ console.log(buyBurgers(4))
 /// Write a function called buyMeals(budget) that tells the user how many meals they can buy and how much money they will have left over.
 /// Bonus: Round the answer to the nearest penny.
 const buyMeals = (budget) => {
-    if (budget/(burger + fries + soda) >= 1){
-        return "You can buy " + Math.floor(budget/(burger + fries + soda)) + " meals. Your change will be ";
+    if (budget/meal > 1){
+        amountMeals = Math.floor(budget/meal)
+        return "You can buy " + amountMeals + " meals. Your change will be " + Math.floor(budget - (amountMeals * meal)) + ".";
     } else {
         return "Sorry, no meals for you.";
     }
 }
+console.log(buyMeals(45))
 
 
 // 17. [Challenge] Write a function missingLeg(side1, side2) that takes in the length of a hypotenuse and a leg of a right triangle and prints out the missing leg's length
