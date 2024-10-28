@@ -51,7 +51,7 @@ console.log(sibling3.toUpperCase())
 console.log(sibling3.toLowerCase())
 
 // 10. Use console.log() and a built-in method to print out Ricardo's name, but with all the instances of the letter a removed or deleted.
-console.log(sibling3.replace(/a/,''))
+console.log(sibling3.replace(/a/g,''))
 
 // 11. Use console.log() and a built-in method to print out "De La Rosa"
 console.log(sibling3.substring(16, 27))
