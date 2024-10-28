@@ -17,44 +17,44 @@ let shoes = 89.78;
 
 // 1. If divided evenly, how much would each sibling get for the week?
 let allowance = weeklyAllowance / 3;
-let string1 = `Each sibling will get ${allowance} for the week.`
-console.log(string1)
+let string1 = `Each sibling will get ${allowance} for the week.`;
+console.log(string1);
 
 // 2. How many games can Jordan buy with their cut?
-let games1 = Math.floor(allowance / 15.99)
-console.log("Jordan can buy " + games1 + " games.")
+let games1 = Math.floor(allowance / 15.99);
+console.log("Jordan can buy " + games1 + " games.");
 
 // 3. The cost of games just went up by a dollar and shoes are on sale at 50% (half) off. Change the variables to their new prices.
-game += 1
-shoes /= 2
+game += 1;
+shoes /= 2;
 
 // 4. Quinn and Ricardo are twins. If they put their money together, how many on sale shoes can they buy in a month (4 weeks)?
-let moneyQR = (allowance * 2)
-console.log("In a month, Quinn and Ricardo can buy " + Math.floor((moneyQR*4)/shoes) +  " on sale shoes.")
+let moneyQR = (allowance * 2);
+console.log("In a month, Quinn and Ricardo can buy " + Math.floor((moneyQR*4)/shoes) +  " on sale shoes.");
 
 // 5. How many more games can they buy if they put their money together compared to if they had bought games on their own?
-let gamesAll = Math.floor(weeklyAllowance / game)
-let diff = gamesAll - (Math.floor(allowance / game))
-console.log("They can buy " + diff + " more games if they put their money together.")
+let gamesAll = Math.floor(weeklyAllowance / game);
+let diff = gamesAll - (Math.floor(allowance / game));
+console.log("They can buy " + diff + " more games if they put their money together.");
 
 // 6. Print out the three siblings' names. "The three siblings are __, __, and ___."
-let string2 = `The three siblings are ${sibling1}, ${sibling2}, and ${sibling3}.`
-console.log(string2)
+let string2 = `The three siblings are ${sibling1}, ${sibling2}, and ${sibling3}.`;
+console.log(string2);
 
 // 7. Use console.log() and a built-in method to count how many characters are in Ricardo's name.
-console.log(sibling3.length)
+console.log(sibling3.length);
 
 // 8. Use console.log() and a built-in method to print out the string "RICARDO MONTOYA DE LA ROSA RAMIREZ"
-console.log(sibling3.toUpperCase())
+console.log(sibling3.toUpperCase());
 
 // 9. Use console.log() and a built-in method to print out the string "ricardo montoya de la rosa ramirez"
-console.log(sibling3.toLowerCase())
+console.log(sibling3.toLowerCase());
 
 // 10. Use console.log() and a built-in method to print out Ricardo's name, but with all the instances of the letter a removed or deleted.
-console.log(sibling3.replace(/a/g,''))
+console.log(sibling3.replace(/a/g,''));
 
 // 11. Use console.log() and a built-in method to print out "De La Rosa"
-console.log(sibling3.substring(16, 27))
+console.log(sibling3.substring(16, 27));
 
 // Medium Challenges
 
@@ -64,12 +64,17 @@ console.log(sibling3.substring(16, 27))
 // function getRandomNum() {
 //     return Math.floor(Math.random() * 100);
 // }
-const getRandomNum = () =>Math.floor(Math.random()*100)
-console.log(getRandomNum)
+const getRandomNum = () => Math.floor(Math.random()*100);
+console.log(getRandomNum);
 
-function greeting(name) {
-    return `Hello ${name}, I'm glad you can make it!`;
-}
+
+//function greeting(name) {
+    //return `Hello ${name}, I'm glad you can make it!`;
+//}
+const greeting = (name) => return `Hello ${name}, I'm glad you can make it!`;
+console.log(greeting(Jimena));
+console.log(greeting(Yarili));
+
 
 function perfectRoot(x) {
     let root = Math.sqrt(x);
