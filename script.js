@@ -64,7 +64,7 @@ console.log(sibling3.substring(16, 27))
 // function getRandomNum() {
 //     return Math.floor(Math.random() * 100);
 // }
-let getRandomNum = Math.floor(Math.random()*100)
+const getRandomNum = () =>Math.floor(Math.random()*100)
 console.log(getRandomNum)
 
 function greeting(name) {
