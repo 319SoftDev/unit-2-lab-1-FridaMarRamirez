@@ -76,7 +76,7 @@ function perfectRoot(x) {
     if (Math.floor(root) === root) {
         return root;
     } else {
-        return "No perfect root"
+        return "No perfect root";
     }
 }
 
@@ -131,8 +131,8 @@ const shortenString = (string) => {
 let burger = 5.99;
 let fries = 3.99;
 let soda = 1.99;
-let meal = burger + fries + soda
-let amountMeals = 0
+let meal = burger + fries + soda;
+let amountMeals = 0;
 
 // 15. Write a function buyBurgers(budget) that takes in a budget amount and returns the number of burgers that can be bought.
 /// If no burgers can be bought, return "Sorry, no burgers for you."
@@ -144,8 +144,8 @@ const buyBurgers = (budget) => {
         return "Sorry, no burgers for you.";
     }
 }
-console.log(buyBurgers(30))
-console.log(buyBurgers(4))
+console.log(buyBurgers(30));
+console.log(buyBurgers(4));
 
 // 16. A meal consists of 1 burger, 1 fry, and 1 soda.
 /// Write a function called buyMeals(budget) that tells the user how many meals they can buy and how much money they will have left over.
@@ -153,19 +153,30 @@ console.log(buyBurgers(4))
 const buyMeals = (budget) => {
     if (budget/meal > 1){
         amountMeals = Math.floor(budget/meal)
-        return "You can buy " + amountMeals + " meals. Your change will be " + Math.floor(budget - (amountMeals * meal)) + ".";
+        return "You can buy " + amountMeals + " meals. Your change will be " + Math.ceil(budget - (amountMeals * meal)) + " dollars.";
     } else {
         return "Sorry, no meals for you.";
     }
-}
-console.log(buyMeals(45))
+};
+console.log(buyMeals(45));
+console.log(buyMeals(10));
 
 
 // 17. [Challenge] Write a function missingLeg(side1, side2) that takes in the length of a hypotenuse and a leg of a right triangle and prints out the missing leg's length
-/// The larger side should be the hypotenuse  
-
-
+/// The larger side should be the hypotenuse 
+const missingLeg = (side1, side2) => {
+    if (side1 > side2){
+        return Math.sqrt((side1**2)-(side2**2));
+    } else {
+        return "Error";
+    }
+};
+console.log(missingLeg(5, 4));
+console.log(missingLeg(10, 8));
 
 // 18. [Super Challenge] In math, Factorial is the product of an integer and all the integers below it.
 /// For example: factorial(3) = 3*2*1 = 6 ---  factorial(5) = 5*4*3*2*1 = 120
 /// Write a function factorial(x) that finds the factorial of any integer.
+const factorial = (x) => {
+    
+}
