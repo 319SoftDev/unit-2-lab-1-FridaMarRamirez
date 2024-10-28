@@ -65,25 +65,31 @@ console.log(sibling3.substring(16, 27));
 //     return Math.floor(Math.random() * 100);
 // }
 const getRandomNum = () => Math.floor(Math.random()*100);
-console.log(getRandomNum);
-
+console.log(getRandomNum());
+console.log(getRandomNum());
 
 //function greeting(name) {
     //return `Hello ${name}, I'm glad you can make it!`;
 //}
-const greeting = (name) => return `Hello ${name}, I'm glad you can make it!`;
-console.log(greeting(Jimena));
-console.log(greeting(Yarili));
+const greeting = (name) => `Hello ${name}, I'm glad you can make it!`;
+console.log(greeting("Jimena"));
+console.log(greeting("Yarili"));
 
 
-function perfectRoot(x) {
+// function perfectRoot(x) {
+//     let root = Math.sqrt(x);
+//     if (Math.floor(root) === root) {
+//         return root;
+//     } else {
+//         return "No perfect root";
+//     }
+// };
+const perfectRoot = (x) => {
     let root = Math.sqrt(x);
-    if (Math.floor(root) === root) {
-        return root;
-    } else {
-        return "No perfect root";
-    }
-}
+    return Math.floor(root) === root ? root : "No perfect root";
+};
+
+console.log(perfectRoot(9));
 
 // 13. Fix/Finish the following functions.
 /// Then, call them with at least 2 different inputs to ensure they work.
@@ -91,7 +97,7 @@ function perfectRoot(x) {
 /// a. Adds 2 numbers and returns the sum
 const addNums = (x, y) => {
     return sum = x + y;
-}
+};
 // uncomment the line below, to call the function, and add one more function call
 console.log(addNums(4, 6));
 console.log(addNums(11, 4));
@@ -103,7 +109,7 @@ const isBeyonce = (name) => {
     } else {
         return `Sorry ${name}, you're not Beyonce`;
     }
-}
+};
 
 console.log(isBeyonce("Beyonce"));
 console.log(isBeyonce("Jimena"));
@@ -115,11 +121,11 @@ console.log(isBeyonce("Jimena"));
 /// For example reduceEvens(10) => 5 -- reduceEvens(11) => 11
 const reduceEvens = (x) => {
     if(x % 2 == 0){
-        return x / 2
+        return x / 2;
     } else {
         return x;
     }
-}
+};
 //Write your own function calls
 console.log(reduceEvens(15));
 console.log(reduceEvens(34));
@@ -183,5 +189,7 @@ console.log(missingLeg(10, 8));
 /// For example: factorial(3) = 3*2*1 = 6 ---  factorial(5) = 5*4*3*2*1 = 120
 /// Write a function factorial(x) that finds the factorial of any integer.
 const factorial = (x) => {
-    
+    if (x > 0){
+        
+    }
 }
